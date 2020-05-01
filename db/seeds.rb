@@ -5,3 +5,24 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+NAMES = ["Apple", "Bamboo", "Tarantula", "Pear", "Shell Rug", "Gold"]
+CATEGORIES = ["fruit", "fish", "bug", "recipe", "decoration", "resource"]
+
+puts "Clearing database"
+Event.destroy_all
+Item.destroy_all
+User.destroy_all
+
+puts "Creating user"
+user = User.create!(email: "tester@test.com", password: "123123", username: "Tester", island: "Testland")
+
+puts "Creating items"
+10.times do
+  Item.create!(name: NAMES.sample, category: CATEGORIES.sample)
+end
+
+puts "Creating events"
+5.times do
+  Event.create!(name: "Test Event", date: "1/5/2020 16:00", description: "This is a description", user: user)
+end
