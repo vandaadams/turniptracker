@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# fake data for user, items and events
+
 NAMES = ["Apple", "Bamboo", "Tarantula", "Pear", "Shell Rug", "Gold"]
 CATEGORIES = ["fruit", "fish", "bug", "recipe", "decoration", "resource"]
 
@@ -28,6 +30,7 @@ puts "Creating events"
   Event.create!(name: "Test Event", date: "1/5/2020 16:00", description: "This is a description", user: user)
 end
 
+# gets data for villagers from API call
 require 'json'
 require 'open-uri'
 
@@ -44,6 +47,7 @@ result.keys.each do |villager|
   villager_catchphrase << result[villager]['catch-phrase']
 end
 
+# creates villagers
 for i in 0...villager_names.count
   Villager.create!(name: villager_names[i], catch_phrase: villager_catchphrase[i])
 end
