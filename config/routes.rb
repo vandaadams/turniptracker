@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :events, only: [:new, :create, :update]
   end
 
+  resources :villagers, only: :index
   resources :items, only: :index
   resources :events, only: :index
 
