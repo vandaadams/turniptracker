@@ -52,7 +52,8 @@ end
 
 # creates villagers
 for i in 0...names.count
+  file = URI.open(images[i])
   v = Villager.create!(name: names[i], catch_phrase: catchphrases[i])
-  v.image.attach(io: URI.open(images[i]), filename: 'image.png', content_type: 'image/png')
+  v.image.attach(io: file, filename: 'image.png', content_type: 'image/png')
   v.save!
 end

@@ -1,5 +1,5 @@
 <% @villagers.each do |villager| %>
   <p><%= villager.name %></p>
   <p><%= villager.catch_phrase %></p>
-  <p><%= villager.image %></p>
+  <p><%= cl_image_tag villager.image.key %></p>
 <% end %>
