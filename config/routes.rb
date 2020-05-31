@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   resources :items, only: :index
   resources :events, only: :index
 
-  get "/profile", to: 'pages#profile'
+  #get "/profile", to: 'pages#profile'
 end
