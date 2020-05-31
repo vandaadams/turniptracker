@@ -47,9 +47,10 @@ images = []
 result.keys.each do |villager|
   names << result[villager]['name']['name-EUen']
   catchphrases << result[villager]['catch-phrase']
-  images << result[villager]['image_uri']
+  images << result[villager]['icon_uri']
 end
 
+p images[0]
 # creates villagers
 for i in 0...names.count
   file = URI.open(images[i])
