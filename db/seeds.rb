@@ -47,7 +47,7 @@ images = []
 result.keys.each do |villager|
   names << result[villager]['name']['name-EUen']
   catchphrases << result[villager]['catch-phrase']
-  images << result[villager]['icon_uri']
+  images << result[villager]['image_uri']
 end
 
 p images[0]
