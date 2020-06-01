@@ -1,0 +1,31 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+  background-color: #FFFEEF;
+}
+
+.container {
+  display: flex;
+}
+
+.left-side {
+  position: relative;
+  z-index: -1;
+  background-image: url('image.png');
+  width: 50vw;
+  height: 100vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.right-side {
+  position: relative;
+  z-index: 1;
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

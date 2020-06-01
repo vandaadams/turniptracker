@@ -1,1 +1,10 @@
-<h1>Hello World!</h1>
+<div class="container">
+  <div class="right-side">
+    <% @events.each do |event| %>
+      <p><%= event.name  %></p>
+    <% end %>
+  </div>
+  <div class="left-side">
+  </div>
+</div>
+
