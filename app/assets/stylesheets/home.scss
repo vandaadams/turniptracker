@@ -3,9 +3,10 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 body {
   background-color: #F9F7F0;
+  font-family: Raleway;
 }
 
-.container {
+.section-1 {
   display: flex;
 }
 
@@ -28,4 +29,5 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
