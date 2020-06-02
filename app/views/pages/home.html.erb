@@ -1,4 +1,4 @@
-<div class="section-1">
+<div class="section">
   <div class="right-side">
    <h1>ACNH Swap</h1>
     <ul>
@@ -11,7 +11,15 @@
   <div class="left-side">
   </div>
 </div>
-<div class="section-2">
-
+<div class="section home-about">
+  <h3>Animal Crossing Swap</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam repellendus nihil sint accusantium deserunt harum officia. Nisi eveniet, nobis illo dignissimos facere. Maxime excepturi ducimus illo architecto error libero eveniet?</p>
+</div>
+<div class="section home-events">
+  <ul>
+  <% @events.each do |event| %>
+      <li> <%= event.name %></li>
+  <% end %>
+  </ul>
 </div>
 
