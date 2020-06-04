@@ -4,8 +4,7 @@ div.container {
   margin: 0 auto;
   padding: 1em 3em;
   text-align: center;
-  position: sticky;
-  top: 0;
+
 }
 
 div.container a {
@@ -17,35 +16,9 @@ div.container a {
     position: relative;
     z-index: 0;
     cursor: pointer;
+  &:hover {
+    border-bottom: solid 2px #191919;
+  }
 }
 
-div.topBottomBorder a:before, div.topBottomBorder a:after
-{
-    position: absolute;
-    left: 0px;
-    width: 100%;
-    height: 2px;
-    background: #191919;
-    content: "";
-    opacity: 0;
-    transition: all 0.3s;
-}
-
-div.topBottomBorder a:before
-{
-    top: 0px;
-    transform: translateY(10px);
-}
-
-div.topBottomBorder a:after
-{
-    bottom: 0px;
-    transform: translateY(-10px);
-}
-
-div.topBottomBorder a:hover:before, div.topBottomBorder a:hover:after
-{
-    opacity: 1;
-    transform: translateY(0px);
-}
 
