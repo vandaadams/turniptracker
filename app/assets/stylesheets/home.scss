@@ -1,0 +1,46 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+  margin: 0 auto;
+  background-color: #F9F7F0;
+  font-family: Raleway;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+.left-side {
+  position: relative;
+  z-index: -1;
+  background-image: url('image.png');
+  width: 50vw;
+  height: 100vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.right-side {
+  position: relative;
+  z-index: 1;
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home-about {
+  background-image: url('bg2.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.home-events {
+ background-color: #67DDF1;
+}
