@@ -4,6 +4,10 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
+/* ----------------
+NAVBAR
+---------------- */
+
 #navbar {
   width: 100vw;
   background-color: transparent;
@@ -61,4 +65,49 @@ li strong {
 li:first-child {
   margin-right: auto;
   margin-left: 3em;
+}
+
+/* ----------------
+HOME PAGE
+---------------- */
+.container {
+  height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+.left {
+  place-self: center;
+}
+
+button {
+  width: 350px;
+  font-size: 1em;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  border-radius: 50px;
+  background: #A24C86;
+  background: -webkit-linear-gradient(left, #A24C86, #755790);
+}
+
+button:hover {
+  background: -webkit-linear-gradient(left, #755790, #A24C86);
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.right {
+  place-self: center;
+}
+
+img {
+  max-height: 450px;
 }
