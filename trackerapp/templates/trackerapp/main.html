@@ -7,15 +7,22 @@
     <link rel="icon" href="{% static 'images/favicon.png' %}"  type="image/icon type">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   </head>
   <body>
-    <h3>Navbar Placeholder</h3>
-        <div class="container">
-          <br>
-          {% block content %}
-          {% endblock content %}
-       </div>
+    <div id='navbar'>
+      <ul>
+        <li><img src="{% static 'images/turnip.png'%}" alt=""><strong>Turnip</strong>Tracker</li>
+        <li><a href="#" class="nav-underline">Home</a></li>
+        <li><a href="#" class="nav-underline">Profile</a></li>
+        <li><a href="#" class="nav-underline">Sign up</a></li>
+      </ul>
+    </div>
+
+    <div class="container">
+      {% block content %}
+      {% endblock content %}
+   </div>
   </body>
 </html>
