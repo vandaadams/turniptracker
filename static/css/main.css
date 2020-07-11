@@ -81,7 +81,7 @@ HOME PAGE
   justify-items: center;
 }
 
-.left {
+.left-side {
   place-self: center;
   max-width: 550px;
 }
@@ -109,7 +109,7 @@ button:hover {
   transition: all .4s ease-in-out;
 }
 
-.right {
+.right-side {
   place-self: center;
   display: flex;
   align-items: baseline;
@@ -128,9 +128,9 @@ img {
   color: #fff;
 }
 
-/*
+/* ------
 CAROUSEL
-*/
+-------- */
 
 h1 {
   padding-top: 1.5em;
@@ -385,4 +385,19 @@ h1 {
     opacity: 0;
     z-index: 0;
   }
+}
+
+/* ---------
+CARDS
+----------- */
+
+.cards {
+  display: flex;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  justify-content: center;
+}
+
+.card {
+  width: 200px;
+  padding: 16px 8px;
 }
