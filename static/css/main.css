@@ -96,7 +96,6 @@ button {
   text-align:center;
   border: none;
   border-radius: 50px;
-  background: #A24C86;
   background: -webkit-linear-gradient(left, #A24C86, #755790);
 }
 
@@ -399,5 +398,17 @@ CARDS
 
 .card {
   width: 200px;
-  padding: 16px 8px;
+  padding: 8px 24px;
+  margin: 32px 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.fas {
+  font-size: 1.5em;
+  background: -webkit-linear-gradient(left, #A24C86, #755790);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
