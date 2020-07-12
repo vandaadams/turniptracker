@@ -8,9 +8,7 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
-/* ----------------
-NAVBAR
----------------- */
+/* -------------- NAVBAR -------------- */
 
 #navbar {
   width: 100%;
@@ -70,9 +68,8 @@ li a {
   margin-left: 3em;
 }
 
-/* ----------------
-HOME PAGE
----------------- */
+/* -------------- HOME PAGE -------------- */
+
 .grid-container {
   margin-top: 16px;
   padding-top: 24px;
@@ -126,9 +123,7 @@ img {
   color: #fff;
 }
 
-/* ------
-CAROUSEL
--------- */
+/* -------------- CAROUSEL -------------- */
 
 h1 {
   padding-top: 1.5em;
@@ -385,9 +380,8 @@ h1 {
   }
 }
 
-/* ---------
-CARDS
------------ */
+/* -------------- CARDS -------------- */
+
 .cards-container {
   padding: 32px;
 }
