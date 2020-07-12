@@ -1,0 +1,62 @@
+{% extends 'trackerapp/main.html' %}
+{% load static %}
+{% block content %}
+<h1 class="chart-header">YOUR WEEKLY TURNIP CHART</h1>
+<div class="form-container">
+  <div class="left-form-side">
+    <div id='myChart'></div>
+    <script type="text/javascript">
+      var myConfig = {
+        type: "bar",
+        "title": {
+          "text": "",
+          "font-color": "#7E7E7E",
+          "backgroundColor": "none",
+          "font-size": "22px",
+          "alpha": 1,
+          "adjust-layout":true,
+        },
+        "scale-x":{
+          "values": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+          ]
+        },
+        series: [
+        {
+          values:[105,67,53,102,130,50],
+          "borderRadiusTopLeft": 7,
+          "background-color": "#a24c86 #D969AC",
+          "text": "Morning",
+        },
+        {
+          values:[55,70,45,85,99,45],
+          "borderRadiusTopLeft": 7,
+          "background-color": "#755790 #a24c86",
+          "text": "Evening",
+        },
+        ]
+      }
+
+      zingchart.render({
+        id : 'myChart',
+        data : myConfig,
+      });
+    </script>
+
+  </div>
+  <div class="right-form-side">
+    <form class="" method="POST">
+      <h3>Add Turnip Prices to the chart</h3>
+      {% csrf_token %}
+      {{form.as_p}}
+      <button type="submit" class="sub-btn">Log Price</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
