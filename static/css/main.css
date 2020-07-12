@@ -389,8 +389,7 @@ h1 {
 CARDS
 ----------- */
 .cards-container {
-  height: 60vh;
-  padding: 24px;
+  padding: 32px;
 }
 
 .cards-container h1 {
@@ -413,9 +412,16 @@ CARDS
   background-color: rgb(150, 150, 150);
   color: #fff;
   border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.card img {
+  max-width: 180px;
+  padding: 16px 8px;
+  background-color: #fff;
 }
 
 .card p {
