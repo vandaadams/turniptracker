@@ -50,7 +50,6 @@ li a {
   display: block;
   height: 0.4em;
   width: 0%;
-  background: #A24C86;
   background: -webkit-linear-gradient(left, #A24C86, #755790);
   bottom: -1em;
   transition: all ease-in-out 250ms;
@@ -171,7 +170,7 @@ h1 {
 }
 
 .slider .quote {
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 
 .slider li.anim1 {
@@ -390,8 +389,7 @@ h1 {
 CARDS
 ----------- */
 .cards-container {
-  height: 60vh;
-  padding: 24px;
+  padding: 32px;
 }
 
 .cards-container h1 {
@@ -414,9 +412,16 @@ CARDS
   background-color: rgb(150, 150, 150);
   color: #fff;
   border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+.card img {
+  max-width: 180px;
+  padding: 16px 8px;
+  background-color: #fff;
 }
 
 .card p {
@@ -428,4 +433,13 @@ CARDS
   background: -webkit-linear-gradient(left, #A24C86, #755790);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* -------------- CHART -------------- */
+
+#myChart {
+  height:70vh;
+  width:70vw;
+  margin: 24px;
+  padding: 32px;
 }

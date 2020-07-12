@@ -9,3 +9,7 @@ def home(request):
 def profile(request):
     context = {}
     return render(request, 'trackerapp/profile.html', context)
+
+def chart(request):
+    context = {}
+    return render(request, 'trackerapp/chart.html', context)
