@@ -432,8 +432,59 @@ h1 {
 /* -------------- CHART -------------- */
 
 #myChart {
-  height:70vh;
-  width:70vw;
+  height:60vh;
+  width:60vw;
   margin: 24px;
   padding: 32px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.chart-header {
+  font-weight: 400;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-form-side {
+  width: 30vw;
+  display: flex;
+  align-items: center;
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  background-color: #4A4A4A;
+  padding: 32px;
+  margin: 24px;
+  color: #fff;
+}
+form h3 {
+  margin-top: 0;
+  font-weight: 400;
+}
+
+#id_day,
+#id_time,
+#id_price {
+  color: #4A4A4A;
+  font-size: 16px;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 4px;
+  padding: 4px;
+  border: none;
+}
+
+.sub-btn {
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  align-self: center;
+  font-family: 'Quicksand', sans-serif;
 }
