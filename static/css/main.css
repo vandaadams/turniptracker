@@ -50,7 +50,6 @@ li a {
   display: block;
   height: 0.4em;
   width: 0%;
-  background: #A24C86;
   background: -webkit-linear-gradient(left, #A24C86, #755790);
   bottom: -1em;
   transition: all ease-in-out 250ms;
@@ -428,4 +427,13 @@ CARDS
   background: -webkit-linear-gradient(left, #A24C86, #755790);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* -------------- CHART -------------- */
+
+#myChart {
+  height:70vh;
+  width:70vw;
+  margin: 24px;
+  padding: 32px;
 }
