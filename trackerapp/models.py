@@ -11,10 +11,10 @@ class Turnip(models.Model):
         ('Friday', 'Friday'),
         ('Saturday', 'Saturday'),
     )
-    day = models.CharField(blank=False, choices=day_choice)
+    day = models.CharField(blank=False, choices=day_choice, default='Monday')
     time_choice = (
         ('Morning', 'Morning'),
         ('Evening', 'Evening'),
     )
-    time = models.CharField(blank=False, choices=time_choice)
+    time = models.CharField(blank=False, choices=time_choice, default='Morning')
     price = models.IntegerField(blank=False)
