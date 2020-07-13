@@ -16,10 +16,14 @@
   <body>
     <div id='navbar'>
       <ul class="nav-list">
-        <li><a href="#"> <img src="{% static 'images/turnip.png'%}" alt=""><strong>Turnip</strong>Tracker</a></li>
+        <li><a href="{% url 'home' %}"> <img src="{% static 'images/turnip.png'%}" alt=""><strong>Turnip</strong>Tracker</a></li>
         <li><a href="#" class="nav-underline">Calculator</a></li>
-        <li><a href="#" class="nav-underline">Turnip Chart</a></li>
-        <li><a href="#" class="nav-underline">Login</a></li>
+        <li><a href="{% url 'form' %}" class="nav-underline">Turnip Chart</a></li>
+        {% if user.is_authenticated %}
+          <li><a href="{% url 'logout' %}" class="nav-underline">Log out</a></li>
+        {% else %}
+          <li><a href="{% url 'login' %}" class="nav-underline">Login</a></li>
+        {% endif %}
       </ul>
     </div>
 
