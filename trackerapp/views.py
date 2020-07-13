@@ -7,11 +7,11 @@ from .forms import TurnipForm
 # Create your views here.
 def registerPage(request):
     context = {}
-    return render(request, 'accounts/register.html', context)
+    return render(request, 'trackerapp/register.html', context)
 
 def loginPage(request):
     context = {}
-    return render(request, 'accounts/login.html', context)
+    return render(request, 'trackerapp/login.html', context)
 
 class PriceList(View):
     def get(self, request):
