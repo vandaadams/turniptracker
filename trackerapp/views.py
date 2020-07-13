@@ -45,6 +45,10 @@ def loginPage(request):
     context = {}
     return render(request, 'trackerapp/login.html', context)
 
+def logoutUser(request):
+    logout(request, user)
+    return redirect('home')
+
 class PriceList(View):
     def get(self, request):
         form = TurnipForm()
