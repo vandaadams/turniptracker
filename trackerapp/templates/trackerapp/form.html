@@ -53,8 +53,8 @@
     <form class="" method="POST">
       <h3>Add Turnip Prices to the chart</h3>
       {% csrf_token %}
-      {{form.as_p}}
-      <button type="submit" class="sub-btn">Log Price</button>
+      {{ form.as_table }}
+      <button type="submit" id="btn" class="sub-btn">Log Price</button>
     </form>
   </div>
 </div>

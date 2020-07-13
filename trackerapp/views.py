@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import View
 
 from .models import Turnip
@@ -10,7 +10,19 @@ class PriceList(View):
     def get(self, request):
         form = TurnipForm()
         prices = Turnip.objects.all()
-        return render (request, 'trackerapp/form.html', context={'form': form})
+        return render (request, 'trackerapp/form.html', context={'form': form, 'prices': prices})
+
+    def post(self, request):
+        if request.method =="POST":
+            form = TurnipForm(request.POST)
+            if form.is_valid():
+                print('valid')
+                new_price = form.save()
+                return redirect('form')
+            else:
+                print('not valid')
+                print(form.errors)
+                return redirect('form')
 
 def home(request):
     context = {}
@@ -19,7 +31,3 @@ def home(request):
 def profile(request):
     context = {}
     return render(request, 'trackerapp/profile.html', context)
-
-def chart(request):
-    context = {}
-    return render(request, 'trackerapp/form.html', context)
