@@ -5,19 +5,19 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 class Turnip(models.Model):
     day_choice = (
-        ('Monday', 'Monday'),
-        ('Tuesday', 'Tuesday'),
-        ('Wednesday', 'Wednesday'),
-        ('Thursday', 'Thursday'),
-        ('Friday', 'Friday'),
-        ('Saturday', 'Saturday'),
+        ('0', 'Monday'),
+        ('1', 'Tuesday'),
+        ('2', 'Wednesday'),
+        ('3', 'Thursday'),
+        ('4', 'Friday'),
+        ('5', 'Saturday'),
     )
-    day = models.CharField(max_length=10, blank=False, choices=day_choice, default='Monday')
+    day = models.CharField(max_length=10, choices=day_choice, default='Monday')
     time_choice = (
-        ('Morning', 'Morning'),
-        ('Evening', 'Evening'),
+        ('M', 'Morning'),
+        ('E', 'Evening'),
     )
-    time = models.CharField(max_length=10, blank=False, choices=time_choice, default='Morning')
+    time = models.CharField(max_length=10, choices=time_choice, default='Morning')
     price = models.IntegerField(blank=False, validators=[
             MaxValueValidator(700),
             MinValueValidator(0)
