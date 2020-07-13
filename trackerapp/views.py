@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.views.generic import View
 from django.contrib.auth.forms import UserCreationForm
 
+from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
 from .models import Turnip
@@ -28,6 +29,19 @@ def registerPage(request):
     return render(request, 'trackerapp/register.html', context)
 
 def loginPage(request):
+
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            return redirect('home')
+        else:
+            messages.info(request, 'Invalid username or password.')
+
     context = {}
     return render(request, 'trackerapp/login.html', context)
 
