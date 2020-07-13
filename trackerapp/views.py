@@ -15,6 +15,7 @@ def registerPage(request):
         if form.is_valid():
             print('VALID')
             form.save()
+            return redirect('login')
         else:
             print('NOT VALID')
 

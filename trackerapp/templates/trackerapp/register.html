@@ -74,6 +74,15 @@
 			box-shadow: none !important;
 			outline: 0px !important;
 		}
+		.alert {
+	    position: relative;
+	    background: rgba(161, 77, 133, 0.3);
+	    padding: .75rem 1.25rem;
+			margin-bottom: 0;
+	    margin-top: 1rem;
+	    border: 1px solid transparent;
+	    border-radius: .25rem;
+		}
 
 	</style>
 
@@ -120,6 +129,16 @@
 				   		</div>
 					</form>
 				</div>
+
+				{% if form.errors %}
+		       {% for field in form %}
+		           {% for error in field.errors %}
+		              <div class="alert ">
+		                  {{ error|escape }}
+		              </div>
+		           {% endfor %}
+		       {% endfor %}
+		    {% endif %}
 
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
