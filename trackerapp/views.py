@@ -46,7 +46,7 @@ def loginPage(request):
     return render(request, 'trackerapp/login.html', context)
 
 def logoutUser(request):
-    logout(request, user)
+    logout(request)
     return redirect('home')
 
 class PriceList(View):
