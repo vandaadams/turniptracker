@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from django.views.generic import View
 from django.contrib.auth.forms import UserCreationForm
 
+from django.contrib import messages
+
 from .models import Turnip
 from .forms import TurnipForm, CreateUserForm
 
@@ -15,6 +17,9 @@ def registerPage(request):
         if form.is_valid():
             print('VALID')
             form.save()
+            user = form.cleaned_data.get('username')
+            messages.success(request, 'Account was created for ' + username)
+
             return redirect('login')
         else:
             print('NOT VALID')
