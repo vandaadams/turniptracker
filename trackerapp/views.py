@@ -18,7 +18,7 @@ def registerPage(request):
             print('VALID')
             form.save()
             user = form.cleaned_data.get('username')
-            messages.success(request, 'Account was created for ' + username)
+            messages.success(request, 'Account was created for ' + user)
 
             return redirect('login')
         else:

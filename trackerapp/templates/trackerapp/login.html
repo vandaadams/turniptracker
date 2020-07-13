@@ -77,11 +77,14 @@
 			outline: 0px !important;
 		}
 
-		#messages{
-			background-color: grey;
-			color: #fff;
-			padding: 10px;
-			margin-top: 10px;
+		.alert {
+	    position: relative;
+	    background: rgba(161, 77, 133, 0.3);
+	    padding: .75rem 1.25rem;
+			margin-bottom: 0;
+	    margin-top: 1rem;
+	    border: 1px solid transparent;
+	    border-radius: .25rem;
 		}
 	</style>
 
@@ -116,7 +119,9 @@
 				   			</div>
 					</form>
 				</div>
-
+				{% for message in messages %}
+					<p class="alert">{{message}}</p>
+				{% endfor %}
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
 						Don't have an account? <a href="{% url 'register' %}" class="ml-2">Sign Up</a>
