@@ -1,12 +1,24 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.http import HttpResponse
 from django.views.generic import View
+from django.contrib.auth.forms import UserCreationForm
 
 from .models import Turnip
-from .forms import TurnipForm
+from .forms import TurnipForm, CreateUserForm
 
 # Create your views here.
 def registerPage(request):
-    context = {}
+    form = CreateUserForm()
+
+    if request.method == 'POST':
+        form = CreateUserForm(request.POST)
+        if form.is_valid():
+            print('VALID')
+            form.save()
+        else:
+            print('NOT VALID')
+
+    context = {'form': form}
     return render(request, 'trackerapp/register.html', context)
 
 def loginPage(request):
