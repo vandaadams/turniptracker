@@ -4,6 +4,7 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 # Create your models here.
 
 class Turnip(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=None)
     day_choice = (
         ('0', 'Monday'),
         ('1', 'Tuesday'),
