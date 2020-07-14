@@ -53,24 +53,22 @@ class PriceList(View):
     def get(self, request):
         form = TurnipForm()
         prices = Turnip.objects.all()
-        return render (request, 'trackerapp/form.html', context={'form': form, 'prices': prices})
+        return render (request, 'trackerapp/chart.html', context={'form': form, 'prices': prices})
 
     def post(self, request):
-        if request.method =="POST":
-            form = TurnipForm(request.POST)
-            if form.is_valid():
-                print('valid')
-                new_price = form.save()
-                return redirect('form')
-            else:
-                print('not valid')
-                print(form.errors)
-                return redirect('form')
+        if request.user.is_authenticated:
+            if request.method =="POST":
+                form = TurnipForm(request.POST)
+                if form.is_valid():
+                    print('valid')
+                    instance = form.save(commit=False)
+                    instance.user = request.user
+                    instance.save()
+                    return redirect('chart')
+        else:
+            print('not signed in')
+            return redirect('login')
 
 def home(request):
     context = {}
     return render(request, 'trackerapp/home.html', context)
-
-def profile(request):
-    context = {}
-    return render(request, 'trackerapp/profile.html', context)
