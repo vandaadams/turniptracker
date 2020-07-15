@@ -52,8 +52,8 @@ def logoutUser(request):
 class PriceList(View):
     def get(self, request):
         form = TurnipForm()
-        prices = Turnip.objects.all()
-        return render (request, 'trackerapp/chart.html', context={'form': form, 'prices': prices})
+        turnips = Turnip.objects.all()
+        return render (request, 'trackerapp/chart.html', context={'form': form, 'turnips': turnips})
 
     def post(self, request):
         if request.user.is_authenticated:
