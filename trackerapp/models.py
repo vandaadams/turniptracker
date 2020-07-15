@@ -38,16 +38,16 @@ class ZingChartConfig(models.Model):
     class Meta:
         db_table = "zingchart_config"
 
-class ZingChartSeriesDataM(models.Model):
+class ZingChartSeriesData1(models.Model):
     day = models.IntegerField()
     price = models.IntegerField()
 
     class Meta:
-        db_table = "zingchart_data_morning"
+        db_table = "zingchart_data_1"
 
-class ZingChartSeriesDataE(models.Model):
+class ZingChartSeriesData2(models.Model):
     day = models.IntegerField()
     price = models.IntegerField()
 
     class Meta:
-        db_table = "zingchart_data_evening"
+        db_table = "zingchart_data_2"
