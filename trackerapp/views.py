@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from django.views.generic import View
 from django.contrib.auth.forms import UserCreationForm
+from django.http import JsonResponse
+
 
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -10,6 +12,10 @@ from .models import Turnip
 from .forms import TurnipForm, CreateUserForm
 
 # Create your views here.
+def home(request):
+    context = {}
+    return render(request, 'trackerapp/home.html', context)
+
 def registerPage(request):
     form = CreateUserForm()
 
@@ -52,8 +58,21 @@ def logoutUser(request):
 class PriceList(View):
     def get(self, request):
         form = TurnipForm()
-        prices = Turnip.objects.all()
-        return render (request, 'trackerapp/chart.html', context={'form': form, 'prices': prices})
+        turnips = Turnip.objects.all()
+        morning_prices = [0,0,0,0,0,0]
+        evening_prices = [0,0,0,0,0,0]
+
+        for turnip in turnips:
+            if request.user == turnip.user:
+                if turnip.time == 'M':
+                    morning_prices[int(turnip.day)] = turnip.price
+                elif turnip.time == 'E':
+                    evening_prices[int(turnip.day)] = turnip.price
+
+        return render (request, 'trackerapp/chart.html', context={'form': form,
+                                                                  'turnips': turnips,
+                                                                  'morning_prices':morning_prices,
+                                                                  'evening_prices':evening_prices})
 
     def post(self, request):
         if request.user.is_authenticated:
@@ -68,7 +87,3 @@ class PriceList(View):
         else:
             print('not signed in')
             return redirect('login')
-
-def home(request):
-    context = {}
-    return render(request, 'trackerapp/home.html', context)
