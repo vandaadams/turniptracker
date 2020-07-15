@@ -2,14 +2,20 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from django.views.generic import View
 from django.contrib.auth.forms import UserCreationForm
+from django.http import JsonResponse
+
 
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
-from .models import Turnip
+from .models import Turnip, ZingChartSeriesData1, ZingChartConfig
 from .forms import TurnipForm, CreateUserForm
 
 # Create your views here.
+def home(request):
+    context = {}
+    return render(request, 'trackerapp/home.html', context)
+
 def registerPage(request):
     form = CreateUserForm()
 
@@ -69,6 +75,29 @@ class PriceList(View):
             print('not signed in')
             return redirect('login')
 
-def home(request):
-    context = {}
-    return render(request, 'trackerapp/home.html', context)
+#################  chart #################
+
+def data(request):
+    # Getting all chart-series data from DB
+    oData = ZingChartSeriesData1.objects.all()
+    aSeriesPriceData1 = []
+    aSeriesDayData1 = []
+    response_data = {}
+    for e in oData:
+        aSeriesPriceData1.append(e.price)
+        aSeriesDayData1.append(e.day)
+    response_data['days'] = aSeriesDayData1
+    response_data['prices'] = aSeriesPriceData1
+    return JsonResponse(response_data)
+
+def zingchartConfig(request):
+    # Getting all chart-config data from DB
+    configData = ZingChartConfig.objects.all()
+    response_data = {}
+    for e in configData:
+        print('e: ', e.title)
+        response_data['title'] = e.title
+        response_data['xAxis'] = e.xAxis
+        response_data['yAxis'] = e.yAxis
+        response_data['theme'] = e.theme
+    return JsonResponse(response_data)

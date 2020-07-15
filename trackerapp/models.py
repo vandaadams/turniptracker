@@ -39,7 +39,7 @@ class ZingChartConfig(models.Model):
         db_table = "zingchart_config"
 
 class ZingChartSeriesData1(models.Model):
-    time = models.IntegerField()
+    day = models.IntegerField()
     price = models.IntegerField()
 
     class Meta:
