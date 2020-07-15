@@ -8,7 +8,7 @@ from django.http import JsonResponse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 
-from .models import Turnip, ZingChartSeriesData1, ZingChartConfig
+from .models import Turnip
 from .forms import TurnipForm, CreateUserForm
 
 # Create your views here.
@@ -59,7 +59,20 @@ class PriceList(View):
     def get(self, request):
         form = TurnipForm()
         turnips = Turnip.objects.all()
-        return render (request, 'trackerapp/chart.html', context={'form': form, 'turnips': turnips})
+        morning_prices = [0,0,0,0,0,0]
+        evening_prices = [0,0,0,0,0,0]
+
+        for turnip in turnips:
+            if request.user == turnip.user:
+                if turnip.time == 'M':
+                    morning_prices[int(turnip.day)] = turnip.price
+                elif turnip.time == 'E':
+                    evening_prices[int(turnip.day)] = turnip.price
+
+        return render (request, 'trackerapp/chart.html', context={'form': form,
+                                                                  'turnips': turnips,
+                                                                  'morning_prices':morning_prices,
+                                                                  'evening_prices':evening_prices})
 
     def post(self, request):
         if request.user.is_authenticated:
@@ -74,30 +87,3 @@ class PriceList(View):
         else:
             print('not signed in')
             return redirect('login')
-
-#################  chart #################
-
-def data(request):
-    # Getting all chart-series data from DB
-    oData = ZingChartSeriesData1.objects.all()
-    aSeriesPriceData1 = []
-    aSeriesDayData1 = []
-    response_data = {}
-    for e in oData:
-        aSeriesPriceData1.append(e.price)
-        aSeriesDayData1.append(e.day)
-    response_data['days'] = aSeriesDayData1
-    response_data['prices'] = aSeriesPriceData1
-    return JsonResponse(response_data)
-
-def zingchartConfig(request):
-    # Getting all chart-config data from DB
-    configData = ZingChartConfig.objects.all()
-    response_data = {}
-    for e in configData:
-        print('e: ', e.title)
-        response_data['title'] = e.title
-        response_data['xAxis'] = e.xAxis
-        response_data['yAxis'] = e.yAxis
-        response_data['theme'] = e.theme
-    return JsonResponse(response_data)

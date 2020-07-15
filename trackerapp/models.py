@@ -26,28 +26,3 @@ class Turnip(models.Model):
 
     def __str__(self):
         return self.day
-
-#################  chart #################
-
-class ZingChartConfig(models.Model):
-    title = models.CharField(max_length = 50)
-    xAxis = models.CharField(max_length = 20)
-    yAxis = models.CharField(max_length = 20)
-    theme = models.CharField(max_length = 20)
-
-    class Meta:
-        db_table = "zingchart_config"
-
-class ZingChartSeriesData1(models.Model):
-    day = models.IntegerField()
-    price = models.IntegerField()
-
-    class Meta:
-        db_table = "zingchart_data_1"
-
-class ZingChartSeriesData2(models.Model):
-    day = models.IntegerField()
-    price = models.IntegerField()
-
-    class Meta:
-        db_table = "zingchart_data_2"
