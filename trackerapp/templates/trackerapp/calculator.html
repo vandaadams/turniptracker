@@ -3,31 +3,39 @@
 {% block content %}
   <div class="calculator">
     <form class="" method="POST">
-      <h3>Calculate Your Profit</h3>
+      <div class="form-header">
+        <h3>Profit Calculator</h3>
+        <img src="{% static 'images/turnipw.png' %}" alt="">
+      </div>
       <div class="form-item">
         <label for="number">Number of Turnips:</label><br>
-        <input type="text" name="number" id="number" required>
+        <input type="text" name="number" id="number">
       </div>
       <div class="form-item">
         <label for="buyingprice">Buying Price:</label><br>
-        <input type="text" name="buyingprice" id="buying" required>
+        <input type="text" name="buyingprice" id="buying">
       </div>
       <div class="form-item">
         <label for="sellingprice">Selling Price:</label><br>
-        <input type="text" name="sellingprice" id="selling" required>
+        <input type="text" name="sellingprice" id="selling">
       </div>
-      <button type="button" class="sub-btn" id="btn">Calculate</button>
+
+      <div class="form-item">
+        <label></label><br>
+        <input type="submit" value="Calculate" id="btn">
+      </div>
+
       <div class="form-item">
         <p>Revenue</p>
-        <p id="rev"></p>
+        <p id="rev">0 Bells</p>
       </div>
       <div class="form-item">
         <p>Expenditure</p>
-        <p id="exp"></p>
+        <p id="exp">0 Bells</p>
       </div>
       <div class="form-item">
         <p>Profit</p>
-        <p id="profit"></p>
+        <p id="profit">0 Bells</p>
       </div>
     </form>
   </div>
@@ -46,9 +54,9 @@
       document.forms[0].reset();
 
       console.log('calculated', revenue, expenditure, profit)
-      document.getElementById('rev').innerHTML = revenue
-      document.getElementById('exp').innerHTML = expenditure
-      document.getElementById('profit').innerHTML = profit
+      document.getElementById('rev').innerHTML = revenue + ' Bells'
+      document.getElementById('exp').innerHTML = expenditure + ' Bells'
+      document.getElementById('profit').innerHTML = profit + ' Bells'
     }
 
     document.addEventListener('DOMContentLoaded', ()=>{
