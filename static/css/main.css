@@ -492,9 +492,14 @@ form h3 {
 }
 
 /* -------------- CALCULATOR -------------- */
-.container {
+.calc-content {
+  background-image: url('../images/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 89vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .calculator {
@@ -535,4 +540,25 @@ label {
 .form-item p {
   margin: 0;
   padding-top: 16px;
+}
+
+#btn {
+  color: #fff;
+  cursor: pointer;
+  text-align:center;
+  border: none;
+  border-radius: 4px;
+  padding: 4px;
+  width: 176px;
+  margin-top: 12px;
+  background: -webkit-linear-gradient(left, #A24C86, #755790);
+}
+
+#btn:hover {
+  background: -webkit-linear-gradient(left, #755790, #A24C86);
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }

@@ -1,6 +1,7 @@
 {% extends 'trackerapp/main.html' %}
 {% load static %}
 {% block content %}
+<div class="calc-content">
   <div class="calculator">
     <form class="" method="POST">
       <div class="form-header">
@@ -63,4 +64,5 @@
       document.getElementById('btn').addEventListener('click', calculateProfit);
     });
   </script>
+</div>
 {% endblock content %}
