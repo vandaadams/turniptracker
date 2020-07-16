@@ -489,3 +489,33 @@ form h3 {
   align-self: center;
   font-family: 'Quicksand', sans-serif;
 }
+
+/* -------------- CALCULATOR -------------- */
+
+.calculator {
+  max-width: 500px;
+}
+
+.form-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+input {
+  color: #4A4A4A;
+  font-size: 16px;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 4px;
+  border: none;
+  padding: 4px;
+}
+
+label {
+  padding-top: 16px;
+}
+
+.form-item p {
+  margin: 0;
+  padding-top: 16px;
+}
