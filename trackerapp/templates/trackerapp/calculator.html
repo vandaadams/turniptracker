@@ -1,0 +1,68 @@
+{% extends 'trackerapp/main.html' %}
+{% load static %}
+{% block content %}
+<div class="calc-content">
+  <div class="calculator">
+    <form class="" method="POST">
+      <div class="form-header">
+        <h3>Profit Calculator</h3>
+        <img src="{% static 'images/turnipw.png' %}" alt="">
+      </div>
+      <div class="form-item">
+        <label for="number">Number of Turnips</label><br>
+        <input type="text" name="number" id="number">
+      </div>
+      <div class="form-item">
+        <label for="buyingprice">Buying Price</label><br>
+        <input type="text" name="buyingprice" id="buying">
+      </div>
+      <div class="form-item">
+        <label for="sellingprice">Selling Price</label><br>
+        <input type="text" name="sellingprice" id="selling">
+      </div>
+
+      <div class="form-item">
+        <label></label><br>
+        <input type="submit" value="Calculate" id="btn">
+      </div>
+
+      <div class="form-item">
+        <p>Revenue</p>
+        <p id="rev">0 Bells</p>
+      </div>
+      <div class="form-item">
+        <p>Expenditure</p>
+        <p id="exp">0 Bells</p>
+      </div>
+      <div class="form-item">
+        <p>Profit</p>
+        <p id="profit">0 Bells</p>
+      </div>
+    </form>
+  </div>
+  <script type="text/javascript">
+    const calculateProfit = (event) => {
+      event.preventDefault();
+
+      const num = document.getElementById('number').value
+      const buyingPrice = document.getElementById('buying').value
+      const sellingPrice = document.getElementById('selling').value
+
+      revenue = num * sellingPrice;
+      expenditure = num * buyingPrice;
+      profit = revenue - expenditure;
+
+      document.forms[0].reset();
+
+      console.log('calculated', revenue, expenditure, profit)
+      document.getElementById('rev').innerHTML = revenue + ' Bells'
+      document.getElementById('exp').innerHTML = expenditure + ' Bells'
+      document.getElementById('profit').innerHTML = profit + ' Bells'
+    }
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+      document.getElementById('btn').addEventListener('click', calculateProfit);
+    });
+  </script>
+</div>
+{% endblock content %}

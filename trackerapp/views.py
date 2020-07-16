@@ -2,8 +2,6 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from django.views.generic import View
 from django.contrib.auth.forms import UserCreationForm
-from django.http import JsonResponse
-
 
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -87,3 +85,7 @@ class PriceList(View):
         else:
             print('not signed in')
             return redirect('login')
+
+def calculator(request):
+    context = {}
+    return render(request, 'trackerapp/calculator.html', context)
