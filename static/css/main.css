@@ -485,6 +485,7 @@ form h3 {
 .sub-btn {
   width: 150px;
   height: 40px;
+  margin-top: 16px;
   border-radius: 8px;
   align-self: center;
   font-family: 'Quicksand', sans-serif;

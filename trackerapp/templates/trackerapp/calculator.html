@@ -19,17 +19,19 @@
       <button type="button" class="sub-btn" id="btn">Calculate</button>
       <div class="form-item">
         <p>Revenue</p>
+        <p id="rev"></p>
       </div>
       <div class="form-item">
         <p>Expenditure</p>
+        <p id="exp"></p>
       </div>
       <div class="form-item">
         <p>Profit</p>
+        <p id="profit"></p>
       </div>
     </form>
   </div>
   <script type="text/javascript">
-
     const calculateProfit = (event) => {
       event.preventDefault();
 
@@ -44,6 +46,9 @@
       document.forms[0].reset();
 
       console.log('calculated', revenue, expenditure, profit)
+      document.getElementById('rev').innerHTML = revenue
+      document.getElementById('exp').innerHTML = expenditure
+      document.getElementById('profit').innerHTML = profit
     }
 
     document.addEventListener('DOMContentLoaded', ()=>{
