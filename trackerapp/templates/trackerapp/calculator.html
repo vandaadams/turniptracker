@@ -16,7 +16,7 @@
         <label for="sellingprice">Selling Price:</label><br>
         <input type="text" name="sellingprice" id="selling" required>
       </div>
-      <button type="button" class="sub-btn" name="button">Calculate</button>
+      <button type="button" class="sub-btn" id="btn">Calculate</button>
       <div class="form-item">
         <p>Revenue</p>
       </div>
@@ -28,4 +28,26 @@
       </div>
     </form>
   </div>
+  <script type="text/javascript">
+
+    const calculateProfit = (event) => {
+      event.preventDefault();
+
+      const num = document.getElementById('number').value
+      const buyingPrice = document.getElementById('buying').value
+      const sellingPrice = document.getElementById('selling').value
+
+      revenue = num * sellingPrice;
+      expenditure = num * buyingPrice;
+      profit = revenue - expenditure;
+
+      document.forms[0].reset();
+
+      console.log('calculated', revenue, expenditure, profit)
+    }
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+      document.getElementById('btn').addEventListener('click', calculateProfit);
+    });
+  </script>
 {% endblock content %}
