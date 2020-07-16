@@ -87,3 +87,7 @@ class PriceList(View):
         else:
             print('not signed in')
             return redirect('login')
+
+def calculator(request):
+    context = {}
+    return render(request, 'trackerapp/calculator.html', context)
