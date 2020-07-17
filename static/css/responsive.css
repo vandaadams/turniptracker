@@ -1,0 +1,114 @@
+/* -------------- RESPONSIVE STYLING -------------- */
+/* large screen */
+@media (max-width: 1024px) {
+  .grid-container {
+    height: 31vh;
+  }
+  .left-side {
+    padding-left: 56px;
+  }
+  .card {
+    max-width: 180px;
+    margin: 32px 8px;
+  }
+  .calc-content {
+    height: 94vh;
+  }
+  .calculator {
+    width: 550px;
+    font-size: 1.2em;
+  }
+  .form-container {
+    flex-direction: column;
+  }
+  form {
+    margin: 0;
+  }
+  #myChart {
+    height: 40vh;
+    width: 80vw;
+  }
+  .right-form-side {
+    width: 40vw;
+    display: block;
+  }
+}
+
+/* small screen */
+@media (max-width: 576px) {
+  #navbar {
+    margin: 20px 0;
+  }
+  .nav-list li:first-child {
+    font-size: 16px;
+  }
+
+  .nav-list img {
+    max-height: 25px;
+  }
+
+  .nav-underline {
+    display: none;
+  }
+
+  .nav-list a.icon {
+    float: right;
+    display: block;
+  }
+
+  .nav-list.responsive {
+    position: relative;
+    display: block;
+  }
+
+  .nav-list.responsive li:first-child {
+    position: absolute;
+    left: 0;
+    top: 44px;
+  }
+
+  .nav-list.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 44px;
+  }
+  .nav-list.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .grid-container {
+    margin: 0 24px;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+
+  }
+
+  .left-side h2,
+  .left-side p {
+    text-align: justify;
+  }
+
+  .left-side {
+    text-align: center;
+    padding: 0;
+  }
+
+  button {
+    width: 250px;
+    margin: 20px;
+    height: 35px;
+    font-size: 1em;
+  }
+
+  .grid-container img {
+    max-height: 300px;
+  }
+}
+
+.guide h1 {
+
+}

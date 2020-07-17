@@ -17,6 +17,10 @@ body {
   font-size: 1.25em;
 }
 
+.nav .icon {
+  display: none;
+}
+
 .nav-list {
   list-style: none;
   margin: 0;
@@ -566,39 +570,4 @@ label {
   -o-transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
-}
-
-/* -------------- RESPONSIVE STYLING -------------- */
-@media (max-width: 1024px) {
-  .grid-container {
-    height: 31vh;
-  }
-  .left-side {
-    padding-left: 56px;
-  }
-  .card {
-    max-width: 180px;
-    margin: 32px 8px;
-  }
-  .calc-content {
-    height: 94vh;
-  }
-  .calculator {
-    width: 550px;
-    font-size: 1.2em;
-  }
-  .form-container {
-    flex-direction: column;
-  }
-  form {
-    margin: 0;
-  }
-  #myChart {
-    height: 40vh;
-    width: 80vw;
-  }
-  .right-form-side {
-    width: 40vw;
-    display: block;
-  }
 }
