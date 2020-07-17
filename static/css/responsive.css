@@ -89,6 +89,17 @@
     place-self: center;
     max-width: 300px;
   }
+
+  #myChart {
+    height: 45vh;
+    width: 90vw;
+    margin: 16px;
+  }
+
+  .right-form-side {
+    width: 50vw;
+    margin-bottom: 3em;
+  }
 }
 
 /* small screen */
