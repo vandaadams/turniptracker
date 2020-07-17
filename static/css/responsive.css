@@ -62,13 +62,14 @@
 
   .nav-list.responsive {
     position: relative;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding-left: 1.5em;
   }
 
   .nav-list.responsive li:first-child {
-    position: absolute;
-    left: 0;
-    top: 44px;
+    display: none;
   }
 
   .nav-list.responsive .icon {
@@ -76,10 +77,15 @@
     right: 0;
     top: 44px;
   }
+
+  .nav-underline.responsive {
+    padding-right: 0;
+  }
+
   .nav-list.responsive a {
+    font-size: 0.85em;
     float: none;
     display: block;
-    text-align: left;
   }
 
   .grid-container {
@@ -95,8 +101,8 @@
   .left-side h2 {
     text-align: justify;
     text-transform: uppercase;
-    font-weight: 400;
   }
+
   .left-side p {
     text-align: justify;
   }
