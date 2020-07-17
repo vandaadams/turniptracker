@@ -7,9 +7,15 @@
   .left-side {
     padding-left: 56px;
   }
+  .cards-container {
+    padding: 32px 0;
+  }
   .card {
     max-width: 180px;
     margin: 32px 8px;
+  }
+  .card img {
+    max-width: 150px;
   }
   .calc-content {
     height: 94vh;
@@ -20,6 +26,7 @@
   }
   .form-container {
     flex-direction: column;
+    align-items: center;
   }
   form {
     margin: 0;
@@ -212,8 +219,15 @@
   }
 
   .cards {
+    display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .card {
+    max-width: 300px;
+    padding: 8px 32px;
+    margin: 24px 8px;
   }
 
   .calc-content {
