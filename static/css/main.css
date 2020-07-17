@@ -542,7 +542,7 @@ input {
   padding: 4px;
 }
 
-label {
+.form-item label {
   padding-top: 16px;
 }
 

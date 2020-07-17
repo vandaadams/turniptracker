@@ -99,6 +99,7 @@
   }
 
   .left-side h2 {
+
     text-align: justify;
     text-transform: uppercase;
   }
@@ -167,5 +168,25 @@
 
   .form-item input {
     width: 95px;
+  }
+
+  .right-form-side {
+    width: 300px;
+    margin-bottom: 16px;
+  }
+
+  .chart-header {
+    color: #4A4A4A;
+    font-size: 1.25em;
+    -webkit-text-fill-color: #4a4a4a;
+  }
+
+  #myChart {
+    height: 70vh;
+    width: 90vw;
+  }
+
+  label {
+    padding-top: 0;
   }
 }
