@@ -146,4 +146,26 @@
     flex-direction: column;
     align-items: center;
   }
+
+  .calc-content {
+    height: 90vh;
+  }
+
+  .calculator {
+    width: 300px;
+    font-size: 0.9em;
+  }
+
+  .form-header img {
+      padding-left: 16px;
+      max-width: 30px;
+  }
+
+  #btn {
+    width: 100%;
+  }
+
+  .form-item input {
+    width: 95px;
+  }
 }
