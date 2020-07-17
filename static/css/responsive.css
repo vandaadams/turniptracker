@@ -1,0 +1,260 @@
+/* -------------- RESPONSIVE STYLING -------------- */
+/* large screen */
+@media (max-width: 1024px) {
+  .grid-container {
+    height: 31vh;
+  }
+  .left-side {
+    padding-left: 56px;
+  }
+  .card {
+    max-width: 180px;
+    margin: 32px 8px;
+  }
+  .calc-content {
+    height: 94vh;
+  }
+  .calculator {
+    width: 550px;
+    font-size: 1.2em;
+  }
+  .form-container {
+    flex-direction: column;
+  }
+  form {
+    margin: 0;
+  }
+  #myChart {
+    height: 40vh;
+    width: 80vw;
+  }
+  .right-form-side {
+    width: 40vw;
+    display: block;
+  }
+}
+
+/* medium screen */
+@media (min-width:576px) and (max-width:768px) {
+  #navbar {
+    font-size: 1em;
+  }
+
+  .nav-underline {
+    padding-right: 2em;
+  }
+
+  .grid-container {
+    padding-top: 3em;
+    height: 29vh;
+  }
+
+  .right-side img {
+    max-height: 350px;
+  }
+
+  .left-side {
+    font-size: 0.9em;
+    margin-bottom: 5em;
+  }
+
+  button {
+    width: 250px;
+    height: 45px;
+  }
+
+  .guide {
+    height: 55vh;
+  }
+
+  .guide h1 {
+    font-size: 1.5em;
+    padding-top: 5em;
+  }
+
+  .slider {
+    width: 550px;
+  }
+
+  .slider li {
+    width: 550px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    place-self: center;
+    max-width: 300px;
+  }
+
+  #myChart {
+    height: 45vh;
+    width: 90vw;
+    margin: 16px;
+  }
+
+  .right-form-side {
+    width: 50vw;
+    margin-bottom: 3em;
+  }
+}
+
+/* small screen */
+@media (max-width: 576px) {
+  #navbar {
+    background-color: #F6EBD3;
+  }
+
+  .nav-list li:first-child {
+    margin-left: 1.5em;
+    font-size: 16px;
+  }
+
+  .nav-list img {
+    max-height: 25px;
+  }
+
+  .nav-underline {
+    display: none;
+  }
+
+  .nav-list a.icon {
+    padding-right: 1.5em;
+    font-size: 20px;
+    float: right;
+    display: block;
+  }
+
+  .nav-list.responsive {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding-left: 1.5em;
+  }
+
+  .nav-list.responsive li:first-child {
+    display: none;
+  }
+
+  .nav-list.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 44px;
+  }
+
+  .nav-underline.responsive {
+    padding-right: 0;
+  }
+
+  .nav-list.responsive a {
+    font-size: 0.85em;
+    float: none;
+    display: block;
+  }
+
+  .grid-container {
+    padding-top: 36px;
+    margin: 0 36px;
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    height: 72vh;
+
+  }
+
+  .left-side h2 {
+
+    text-align: justify;
+    text-transform: uppercase;
+  }
+
+  .left-side p {
+    text-align: justify;
+  }
+
+  .left-side {
+    text-align: center;
+    padding: 0;
+  }
+
+  button {
+    width: 250px;
+    margin: 20px;
+    height: 35px;
+    font-size: 1em;
+  }
+
+  .grid-container img {
+    max-height: 270px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+  .guide h1 {
+    padding-top: 3em;
+  }
+
+  .guide {
+    height: 80vh;
+  }
+
+  .slider {
+    max-width: 300px;
+  }
+
+  .slider li {
+    max-width: 300px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .calc-content {
+    height: 90vh;
+  }
+
+  .calculator {
+    width: 300px;
+    font-size: 0.9em;
+  }
+
+  .form-header img {
+      padding-left: 16px;
+      max-width: 30px;
+  }
+
+  #btn {
+    width: 100%;
+  }
+
+  .form-item input {
+    width: 95px;
+  }
+
+  .right-form-side {
+    width: 300px;
+    margin-bottom: 24px;
+  }
+
+  .chart-header {
+    color: #4A4A4A;
+    font-size: 1.25em;
+    -webkit-text-fill-color: #4a4a4a;
+  }
+
+  #myChart {
+    height: 80vh;
+    width: 90vw;
+  }
+
+  label {
+    padding-top: 0;
+  }
+}

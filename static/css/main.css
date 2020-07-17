@@ -17,12 +17,16 @@ body {
   font-size: 1.25em;
 }
 
+.nav-list .icon {
+  display: none;
+}
+
 .nav-list {
   list-style: none;
   margin: 0;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: baseline;
   padding: 1em 0;
 }
 
@@ -80,6 +84,7 @@ li a {
 }
 
 .left-side {
+  padding-left: 24px;
   place-self: center;
   max-width: 550px;
 }
@@ -388,7 +393,7 @@ h1 {
 
 .cards-container h1 {
   margin-top: 0;
-  background: -webkit-linear-gradient(left, #A24C86, #755790);
+  background: -webkit-linear-gradient(left, #d969ac, #755790);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -435,12 +440,15 @@ h1 {
   height:60vh;
   width:60vw;
   margin: 24px;
-  padding: 32px;
+  padding: 0 32px;
   font-family: 'Quicksand', sans-serif;
 }
 
 .chart-header {
   font-weight: 400;
+  background: -webkit-linear-gradient(left, #d969ac, #755790);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .form-container {
@@ -466,6 +474,7 @@ form {
   color: #fff;
 }
 form h3 {
+  text-align: center;
   margin-top: 0;
   font-weight: 400;
 }
@@ -533,7 +542,7 @@ input {
   padding: 4px;
 }
 
-label {
+.form-item label {
   padding-top: 16px;
 }
 
@@ -550,7 +559,7 @@ label {
   border-radius: 4px;
   padding: 4px;
   width: 176px;
-  margin-top: 12px;
+  margin-top: 16px;
   background: -webkit-linear-gradient(left, #A24C86, #755790);
 }
 
