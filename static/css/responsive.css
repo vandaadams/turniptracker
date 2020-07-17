@@ -35,7 +35,7 @@
 }
 
 /* medium screen */
-@media (max-width:768px) {
+@media (min-width:576px) and (max-width:768px) {
   #navbar {
     font-size: 1em;
   }
@@ -45,6 +45,7 @@
   }
 
   .grid-container {
+    padding-top: 3em;
     height: 29vh;
   }
 
@@ -54,7 +55,7 @@
 
   .left-side {
     font-size: 0.9em;
-    margin-bottom: 56px;
+    margin-bottom: 5em;
   }
 
   button {
