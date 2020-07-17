@@ -34,6 +34,62 @@
   }
 }
 
+/* medium screen */
+@media (max-width:768px) {
+  #navbar {
+    font-size: 1em;
+  }
+
+  .nav-underline {
+    padding-right: 2em;
+  }
+
+  .grid-container {
+    height: 29vh;
+  }
+
+  .right-side img {
+    max-height: 350px;
+  }
+
+  .left-side {
+    font-size: 0.9em;
+    margin-bottom: 56px;
+  }
+
+  button {
+    width: 250px;
+    height: 45px;
+  }
+
+  .guide {
+    height: 55vh;
+  }
+
+  .guide h1 {
+    font-size: 1.5em;
+    padding-top: 5em;
+  }
+
+  .slider {
+    width: 550px;
+  }
+
+  .slider li {
+    width: 550px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    place-self: center;
+    max-width: 300px;
+  }
+}
+
 /* small screen */
 @media (max-width: 576px) {
   #navbar {
