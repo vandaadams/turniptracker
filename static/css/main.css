@@ -80,6 +80,7 @@ li a {
 }
 
 .left-side {
+  padding-left: 24px;
   place-self: center;
   max-width: 550px;
 }
@@ -466,6 +467,7 @@ form {
   color: #fff;
 }
 form h3 {
+  text-align: center;
   margin-top: 0;
   font-weight: 400;
 }
@@ -550,7 +552,7 @@ label {
   border-radius: 4px;
   padding: 4px;
   width: 176px;
-  margin-top: 12px;
+  margin-top: 16px;
   background: -webkit-linear-gradient(left, #A24C86, #755790);
 }
 
@@ -561,4 +563,39 @@ label {
   -o-transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+}
+
+/* -------------- RESPONSIVE STYLING -------------- */
+@media (max-width: 1024px) {
+  .grid-container {
+    height: 31vh;
+  }
+  .left-side {
+    padding-left: 56px;
+  }
+  .card {
+    max-width: 180px;
+    margin: 32px 8px;
+  }
+  .calc-content {
+    height: 94vh;
+  }
+  .calculator {
+    width: 550px;
+    font-size: 1.2em;
+  }
+  .form-container {
+    flex-direction: column;
+  }
+  form {
+    margin: 0;
+  }
+  #myChart {
+    height: 40vh;
+    width: 80vw;
+  }
+  .right-form-side {
+    width: 40vw;
+    display: block;
+  }
 }
