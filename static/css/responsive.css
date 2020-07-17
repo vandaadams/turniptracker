@@ -172,7 +172,7 @@
 
   .right-form-side {
     width: 300px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
 
   .chart-header {
@@ -182,7 +182,7 @@
   }
 
   #myChart {
-    height: 70vh;
+    height: 80vh;
     width: 90vw;
   }
 
