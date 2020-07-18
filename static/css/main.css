@@ -518,7 +518,7 @@ form h3 {
   font-size: 1.5em;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
 }
 
 .form-header img {
@@ -529,7 +529,7 @@ form h3 {
 .form-item {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 }
 
 input {
