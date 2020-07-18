@@ -88,6 +88,29 @@
 	    border: 1px solid transparent;
 	    border-radius: .25rem;
 		}
+
+		@media (max-width:1024px) {
+			.user_card {
+				height: 70vh;
+				width: 90vw;
+			}
+			.form-control {
+				font-size: 2em;
+				height: 4vh;
+			}
+			.btn {
+				font-size: 2em;
+			}
+			.fas {
+				font-size: 1.75em;
+			}
+			h3 {
+				font-size: 3em;
+			}
+			.msg {
+				font-size: 2em;
+			}
+		}
 	</style>
 
 </head>
@@ -125,7 +148,7 @@
 					<p class="alert">{{message}}</p>
 				{% endfor %}
 				<div class="mt-4">
-					<div class="d-flex justify-content-center links">
+					<div class="msg d-flex justify-content-center links">
 						Don't have an account? <a href="{% url 'register' %}" class="ml-2">Sign Up</a>
 					</div>
 
