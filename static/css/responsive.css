@@ -256,6 +256,10 @@
     width: 95px;
   }
 
+  .left-form-side {
+    max-width: 90vw;
+  }
+
   .right-form-side {
     width: 300px;
     margin-bottom: 24px;
@@ -270,6 +274,8 @@
   #myChart {
     height: 80vh;
     width: 90vw;
+    padding: 0;
+    margin: 0;
   }
 
   label {
