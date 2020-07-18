@@ -134,7 +134,7 @@
 
   .nav-list a.icon {
     padding-right: 1.5em;
-    font-size: 0.85em;
+    font-size: 1em;
     float: right;
     display: block;
   }
@@ -153,6 +153,7 @@
 
   .nav-list.responsive .icon {
     position: absolute;
+    font-size: 1em;
     right: 0;
     top: 20px;
   }
@@ -254,6 +255,11 @@
 
   .form-item input {
     width: 95px;
+  }
+
+  .form-container {
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   .left-form-side {
