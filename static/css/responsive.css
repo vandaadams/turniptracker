@@ -130,7 +130,7 @@
 
   .nav-list a.icon {
     padding-right: 1.5em;
-    font-size: 20px;
+    font-size: 0.85em;
     float: right;
     display: block;
   }
@@ -150,7 +150,7 @@
   .nav-list.responsive .icon {
     position: absolute;
     right: 0;
-    top: 44px;
+    top: 20px;
   }
 
   .nav-underline.responsive {
