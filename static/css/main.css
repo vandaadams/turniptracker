@@ -518,7 +518,7 @@ form h3 {
   font-size: 1.5em;
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
 }
 
 .form-header img {
