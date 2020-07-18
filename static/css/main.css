@@ -541,13 +541,12 @@ input {
   padding: 4px;
 }
 
-.form-item label {
+.form-item {
   padding-top: 16px;
 }
 
 .form-item p {
   margin: 0;
-  padding-top: 16px;
 }
 
 #btn {
