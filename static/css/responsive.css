@@ -289,8 +289,14 @@
   }
 }
 
-@media (min-height:720px) and (max-height:850px) {
+@media (max-width: 576px) and (min-height:736px) and (max-height:812px) {
   .grid-container {
     height: 59vh;
+  }
+}
+
+@media (max-width: 576px) and (min-height:892px) {
+  .grid-container {
+    height: 51vh;
   }
 }
