@@ -9,6 +9,12 @@ http://theturniptracker.herokuapp.com/
 
 TurnipTracker is an Animal Crossing Stalk Market tracker app. You can log Turnip prices on your island during the week, and it helps you predict the Turnip price trends. It also includes a profit calculator. It's responsive for most major devices, but works best on larger screens.
 
+## Test User Details
+
+Username: TestUser
+
+Password: testpass123
+
 ## Project Specs
 
 - Python's Django framework
